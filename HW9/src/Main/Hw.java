@@ -38,23 +38,10 @@ public class Hw {
         }
         System.out.println("Nhập id sản phẩm muốn xóa");
         String removeId = sc.nextLine();
-        System.out.println("Nhập số lượng sản phẩm muốn xóa");
-        int removeQuantity=sc.nextInt();
         for (int i = 0; i < arrStore.size(); i++) {
             if (arrStore.get(i).getId().equalsIgnoreCase(removeId)) {
-                while (true) {
-                    if (removeQuantity>0&&removeQuantity<=arrStore.get(i).getQuantity()) {
-                        System.out.println("Số lượng sản phẩm còn lại là: "+(arrStore.get(i).getQuantity()-removeQuantity));
-                        break;
-                    }else {
-                        System.out.println("Lỗi! Mời nhập lại");
-                        int removeQuantity1= sc.nextInt();
-                        if (removeQuantity1>0&&removeQuantity1<=arrStore.get(i).getQuantity()) {
-                            System.out.println("Số lượng sản phẩm còn lại là: "+(arrStore.get(i).getQuantity()-removeQuantity1));
-                            break;
-                        }
-                    }
-                }
+                System.out.println("Đã xóa sản phẩm "+arrStore.get(i));
+                System.out.println("Số lượng sản phẩm còn lại là: "+(arrStore.size()-1));
             }
         }
         System.out.println("Các sản phẩm có số lượng dưới 5 là:");
