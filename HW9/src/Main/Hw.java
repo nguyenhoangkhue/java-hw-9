@@ -68,13 +68,13 @@ public class Hw {
         int findPrice=sc.nextInt();
         for(int i=0;i<arrStore.size();i++){
             if (findPrice<50000){
-                System.out.println("Sản phẩm có giá dưới 50000 là:");
                 if (arrStore.get(i).getPrice()<50000){
+                    System.out.println("Sản phẩm có giá dưới 50000 là:");
                     System.out.println(arrStore.get(i));
                 }
             }else if (findPrice>=100000){
-                System.out.println("Sản phẩm có giá từ 100000 trở lên là:");
                 if (arrStore.get(i).getPrice()>=100000){
+                    System.out.println("Sản phẩm có giá từ 100000 trở lên là:");
                     System.out.println(arrStore.get(i));
                 }
             }else{
